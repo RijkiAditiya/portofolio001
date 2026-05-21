@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rijki Aditiya – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Icons via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">Logo</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About me</a></li>
+      <li><a href="#work">My work</a></li>
+      <li><a href="#services">My services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li class="dropdown">
+        <a href="#resources">Resources <i class="fa fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <div class="dropdown-cols">
+            <div class="dd-left">
+              <p class="dd-cat">Articles</p>
+            </div>
+            <div class="dd-right">
+              <div class="dd-card">
+                <img src="tgs 1.png" alt="Project"/>
+                <div>
+                  <strong>Building with code</strong>
+                  <p>Learn how to structure clean and efficient web applications</p>
+                  <a href="index1.html">Read more</a>
+                </div>
+              </div>
+              <div class="dd-card">
+                <img src="Projek 1.png" alt="Design"/>
+                <div>
+                  <strong>Design principles</strong>
+                  <p>Explore the fundamentals of modern interface design</p>
+                  <a href="../PORTOFOLIOO/projek 4/index4.html">Read more</a>
+                </div>
+              </div>
+              <div class="dd-card">
+                <img src="Projek 2.png" alt="Article"/>
+                <div>
+                  <strong>Article Title</strong>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <a href="../PORTOFOLIOO/projek 2/index2.html">Read more</a>
+                </div>
+              </div>
+              <div class="dd-card">
+                <img src="Projek 3.png" alt="Article"/>
+                <div>
+                  <strong>Article Title</strong>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <a href="../PORT">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-outline" id="signupBtn">Sign up</button>
+      <a href="#contact" class="btn-solid">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">PORTOFOLIO<br>DIRI SAYA</h1>
+      <p class="hero-sub">Designer and developer focused on creating clean, functional websites. Let's work together to bring your ideas to life.</p>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="img-upload-wrapper" onclick="triggerUpload('heroImgInput', 'heroDisplay')">
+        <img id="heroDisplay" src="../PORTOFOLIOO/img/p.png" alt="Hero Image" style="display:none; width:340px; height:260px; object-fit:cover; border-radius:12px;"/>
+        <div class="hero-img-placeholder" id="heroPlaceholder">
+          <i class="fa fa-image"></i>
+          <span class="upload-hint">Klik untuk upload foto</span>
+        </div>
+        <div class="change-overlay"><i class="fa fa-camera"></i> Ganti Foto</div>
+      </div>
+      <input type="file" id="heroImgInput" accept="image/*" style="display:none" onchange="previewImage(this,'heroDisplay','heroPlaceholder')"/>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>About me</h2>
+        <p class="quote-id">"Halo, perkenalkan nama saya Rijki Aditiya. Saat ini saya seorang pelajar yang sedang aktif mengembangkan diri, terutama dalam menyelesaikan tugas-tugas akademis dengan efisien. Saya memiliki latar belakang pengalaman di bidang komputer yang sangat membantu saya untuk bekerja secara sistematis. Saat ini, saya sedang mendalami dunia programming dan memiliki ambisi besar untuk bisa berkontribusi sebagai developer di masa depan."</p>
+        <p class="quote-en">"Hello, my name is Rijki Aditiya. I am a student currently focused on personal development and handling my academic responsibilities efficiently. I have a background in computing, which has taught me to work systematically. Currently, I am diving deep into the world of programming, and I have a strong ambition to contribute as a developer in the future."</p>
+        <div class="about-actions">
+          <a href="ppp.jpeg" class="btn-outline-dark">MY Experience</a>
+          <a href="#" class="btn-text">Arrow &rsaquo;</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <div class="img-upload-wrapper circle-upload" onclick="triggerUpload('profileImgInput','profileImg')">
+          <img src="profil.jpeg" alt="Rijki Aditiya" id="profileImg"/>
+          <div class="change-overlay round"><i class="fa fa-camera"></i> Ganti Foto</div>
+        </div>
+        <input type="file" id="profileImgInput" accept="image/*" style="display:none" onchange="previewImage(this,'profileImg',null)"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECENT PROJECTS ===== -->
+  <section class="projects" id="work">
+    <div class="section-header">
+      <h2>Recent projects</h2>
+      <p>A selection of sites built from concept to launch.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="img-upload-wrapper proj-thumb-wrap" onclick="triggerUpload('proj1Input','proj1Img')">
+          <img id="proj1Img" src="tgs 1.png" alt="Project 1" class="project-thumb-img"/>
+          <div class="change-overlay"><i class="fa fa-camera"></i> Ganti Foto</div>
+        </div>
+        <input type="file" id="proj1Input" accept="image/*" style="display:none" onchange="previewImage(this,'proj1Img',null)"/>
+        <h3>Web Tugas 1</h3>
+        <p>Minimal showcase site with fast load times.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JAVA SCRIPT</span></div>
+        <a href=" https://rijkiaditiya.github.io/projek001/index1.html" class="view-link">View project &rsaquo;</a>
+      </div>
+      <div class="project-card">
+        <div class="img-upload-wrapper proj-thumb-wrap" onclick="triggerUpload('proj2Input','proj2Img')">
+          <img id="proj2Img" src="Projek 1.png" alt="Project 2" class="project-thumb-img"/>
+          <div class="change-overlay"><i class="fa fa-camera"></i> Ganti Foto</div>
+        </div>
+        <input type="file" id="proj2Input" accept="image/*" style="display:none" onchange="previewImage(this,'proj2Img',null)"/>
+        <h3>Web Tugas 2</h3>
+        <p>Full platform redesign with improved checkout flow.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JAVA SCRIPT</span></div>
+        <a href=" https://rijkiaditiya.github.io/Tugas-web/" class="view-link">View project &rsaquo;</a>
+      </div>
+      <div class="project-card">
+        <div class="img-upload-wrapper proj-thumb-wrap" onclick="triggerUpload('proj3Input','proj3Img')">
+          <img id="proj3Img" src="Projek 2.png" alt="Project 3" class="project-thumb-img"/>
+          <div class="change-overlay"><i class="fa fa-camera"></i> Ganti Foto</div>
+        </div>
+        <input type="file" id="proj3Input" accept="image/*" style="display:none" onchange="previewImage(this,'proj3Img',null)"/>
+        <h3>Web Tugas 3</h3>
+        <p>Dashboard interface for data visualization and analysis.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JAVA SCRIPT</span></div>
+        <a href=" https://rijkiaditiya.github.io/tugas-3/" class="view-link">View project &rsaquo;</a>
+      </div>
+      <div class="project-card">
+        <div class="img-upload-wrapper proj-thumb-wrap" onclick="triggerUpload('proj4Input','proj4Img')">
+          <img id="proj4Img" src="Projek 3.png" alt="Project 4" class="project-thumb-img"/>
+          <div class="change-overlay"><i class="fa fa-camera"></i> Ganti Foto</div>
+        </div>
+        <input type="file" id="proj4Input" accept="image/*" style="display:none" onchange="previewImage(this,'proj4Img',null)"/>
+        <h3>Web Tugas 4</h3>
+        <p>Dashboard interface for data visualization and analysis.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JAVA SCRIPT</span></div>
+        <a href=" https://rijkiaditiya.github.io/tugasss/" class="view-link">View project &rsaquo;</a>
+      </div>
+      <div class="project-card">
+        <div class="img-upload-wrapper proj-thumb-wrap" onclick="triggerUpload('proj5Input','proj5Img')">
+          <img id="proj5Img" src="Projek 4.png" alt="Project 5" class="project-thumb-img"/>
+          <div class="change-overlay"><i class="fa fa-camera"></i> Ganti Foto</div>
+        </div>
+        <input type="file" id="proj5Input" accept="image/*" style="display:none" onchange="previewImage(this,'proj5Img',null)"/>
+        <h3>Web Tugas 5</h3>
+        <p>Dashboard interface for data visualization and analysis.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JAVA SCRIPT</span></div>
+        <a href="https://rijkiaditiya.github.io/tugass/" class="view-link">View project &rsaquo;</a>
+      </div>
+    </div>
+    <div class="view-all-wrap">
+      <a href="#" class="btn-outline-dark">View all</a>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="services">
+    <div class="section-header">
+      <h2>My skill</h2>
+      <p>Built by talented individuals who care about quality.</p>
+    </div>
+    <div class="skills-grid">
+      <!-- HTML -->
+      <div class="skill-card">
+        <div class="skill-icon html-icon">
+          <svg viewBox="0 0 32 32" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M4 0l2.4 27L16 30l9.6-3L28 0H4zm20.2 9H10.6l.4 4h12.8l-1.2 12.4L16 27.2l-6.6-1.8L9 18h4l.2 2.2 2.8.8 2.8-.8.4-4.2H8.8L7.6 5h16.8l-.2 4z"/>
+          </svg>
+        </div>
+        <h3>HTML</h3>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar bar-html" data-pct="60">
+            <span>60%</span>
+          </div>
+        </div>
+        <p>Builds clean interfaces and solid code foundations for web projects.</p>
+        <div class="skill-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+      <!-- CSS -->
+      <div class="skill-card">
+        <div class="skill-icon css-icon">
+          <svg viewBox="0 0 32 32" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M4 0l2.4 27L16 30l9.6-3L28 0H4zm16.8 20.4L16 21.8l-4.8-1.4-.4-3.4H14l.2 2 1.8.4 1.8-.4.4-4.4H10.2L9.6 9h12.8l-.4 3.2h-8.8l.2 2.8h8.6l-.8 5.4z"/>
+          </svg>
+        </div>
+        <h3>CSS</h3>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar bar-css" data-pct="40">
+            <span>40%</span>
+          </div>
+        </div>
+        <p>Builds clean interfaces and solid code foundations for web projects.</p>
+        <div class="skill-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+      <!-- JS -->
+      <div class="skill-card">
+        <div class="skill-icon js-icon">JS</div>
+        <h3>JS</h3>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar bar-js" data-pct="20">
+            <span>20%</span>
+          </div>
+        </div>
+        <p>Builds clean interfaces and solid code foundations for web projects.</p>
+        <div class="skill-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+      <!-- Canva -->
+      <div class="skill-card">
+        <div class="skill-icon canva-icon">Canva</div>
+        <h3>CANVA</h3>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar bar-canva" data-pct="80">
+            <span>70%</span>
+          </div>
+        </div>
+        <p>Builds clean interfaces and solid code foundations for web projects.</p>
+        <div class="skill-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+      <!-- Python -->
+      <div class="skill-card">
+        <div class="skill-icon python-icon"><i class="fab fa-python"></i></div>
+        <h3>PYTHON</h3>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar bar-python" data-pct="20">
+            <span>20%</span>
+          </div>
+        </div>
+        <p>Builds clean interfaces and solid code foundations for web projects.</p>
+        <div class="skill-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa fa-globe"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Join the team -->
+    <div class="join-team">
+      <h2>Join the team</h2>
+      <p>We're looking for talented people to collaborate with.</p>
+      <a href="#contact" class="btn-outline-light-sm">See opportunities</a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <h2>Get in touch</h2>
+        <p>Available for new projects and conversations.</p>
+        <div class="contact-item">
+          <i class="fa fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <p>Send a message</p>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa fa-phone"></i>
+          <div>
+            <strong>Phone</strong>
+            <p>Call anytime</p>
+            <a href="tel:+16501234567">+62 812-3456-789</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa fa-location-dot"></i>
+          <div>
+            <strong>Office</strong>
+            <p>Jakarta, Indonesia</p>
+            <a href="#">Get Directions &rsaquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://maps.google.com/maps?q=Jakarta,Indonesia&z=12&output=embed"
+          width="100%" height="260" style="border:0; border-radius:12px;" allowfullscreen
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">Logo</span>
+        <p>Address<br>Jakarta, Indonesia</p>
+        <p>Contact<br>
+          <a href="tel:+6281234567">+62 812-345-4567</a><br>
+          <a href="mailto:hello@portfolio.com">hello@portfolio.com</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="#about">About me</a>
+          <a href="#work">My services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Experience</a>
+          <a href="#contact">Contact me</a>
+        </div>
+        <div>
+          <a href="#home">Home</a>
+          <a href="#work">Work</a>
+          <a href="#services">Skills</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© 2025 Personal portfolio.<br>All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/share/1BBoGUjiCd/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/aditiyaaaw_?igsh=MWV5MHVzNXplYmE2bw=="><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@aditiyaww?_r=1&_t=ZS-96WMdDvUJKn"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <a href="#">Privacy policy</a>
+      <div>
+        <a href="#">Terms of service</a>
+        <a href="#">Cookies settings</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL LOGIN / SIGN UP ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+
+      <!-- Tombol tutup -->
+      <button class="modal-close" id="modalClose">&times;</button>
+
+      <!-- Tab Login / Sign Up -->
+      <div class="modal-tabs">
+        <button class="modal-tab active" id="tabLogin">Login</button>
+        <button class="modal-tab" id="tabSignup">Sign Up</button>
+      </div>
+
+      <!-- FORM LOGIN -->
+      <div class="modal-form" id="formLogin">
+        <h2 class="modal-title">Selamat Datang</h2>
+        <p class="modal-sub">Masuk ke akun kamu</p>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="contoh@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-pw-wrap">
+            <input type="password" id="pwLogin" placeholder="Masukkan password" />
+            <button type="button" class="toggle-pw" onclick="togglePw('pwLogin',this)"><i class="fa fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label"><input type="checkbox"/> Ingat saya</label>
+          <a href="#" class="forgot-link">Lupa password?</a>
+        </div>
+        <button class="btn-modal-submit">Masuk</button>
+        <p class="modal-switch">Belum punya akun? <button class="link-btn" id="goSignup">Daftar sekarang</button></p>
+      </div>
+
+      <!-- FORM SIGN UP -->
+      <div class="modal-form hidden" id="formSignup">
+        <h2 class="modal-title">Buat Akun</h2>
+        <p class="modal-sub">Daftar dan bergabung bersama kami</p>
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" placeholder="Nama kamu" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="contoh@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-pw-wrap">
+            <input type="password" id="pwSignup" placeholder="Buat password" />
+            <button type="button" class="toggle-pw" onclick="togglePw('pwSignup',this)"><i class="fa fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Konfirmasi Password</label>
+          <div class="input-pw-wrap">
+            <input type="password" id="pwConfirm" placeholder="Ulangi password" />
+            <button type="button" class="toggle-pw" onclick="togglePw('pwConfirm',this)"><i class="fa fa-eye"></i></button>
+          </div>
+        </div>
+        <button class="btn-modal-submit">Daftar</button>
+        <p class="modal-switch">Sudah punya akun? <button class="link-btn" id="goLogin">Masuk sekarang</button></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
